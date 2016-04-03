@@ -1,4 +1,4 @@
-#Controller
+
 
 class WhatsOn::CLI
   attr_accessor :shows, :name
@@ -44,8 +44,7 @@ class WhatsOn::CLI
       elsif input == "suggest"
         list_suggestion
       elsif input == "exit"
-        # goodbye
-        else
+      else
           puts "Hmm.  Please check entry and try again."
       end
     end
