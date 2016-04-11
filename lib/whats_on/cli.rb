@@ -17,8 +17,10 @@ class WhatsOn::CLI
   def list_shows
     @shows.each.with_index(1) do |show, i|
       puts "#{i}. #{show[:name]} - #{show[:airing]}"
+
     end
-    puts "Enter the show number for details"
+    puts ''
+    puts "Enter the show number for more details or"
   end
 
   def list_suggestion
@@ -33,7 +35,7 @@ class WhatsOn::CLI
 
   def menu
     puts "What would you like to do next?"
-    puts "Enter List to list all shows, Suggest to suggest a featured show or type exit"
+    puts "Enter LIST to list all shows, SUGGEST to suggest a featured show or type EXIT"
     input = nil
     until input == "exit"
       input = gets.strip.downcase

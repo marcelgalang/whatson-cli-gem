@@ -1,4 +1,4 @@
-_onsource 'https://rubygems.org'
+source 'https://rubygems.org'
 
 # Specify your gem's dependencies in whats_on.gemspec
 gemspec
