@@ -20,7 +20,7 @@ class WhatsOn::CLI
 
     end
     puts ''
-    puts "Enter the show number for more details or"
+    puts "Enter the show number for more details"
   end
 
   def list_suggestion
@@ -33,14 +33,21 @@ class WhatsOn::CLI
     puts "Happy viewing! Goodbye!"
   end
 
+  def prompt
+    puts "Enter LIST to list all shows, SUGGEST to suggest a featured show or type EXIT"
+  end
+
+
   def menu
     puts "What would you like to do next?"
-    puts "Enter LIST to list all shows, SUGGEST to suggest a featured show or type EXIT"
+    prompt
     input = nil
     until input == "exit"
       input = gets.strip.downcase
       if input.to_i > 0
         puts "#{@shows[input.to_i-1][:name]} - #{@shows[input.to_i-1][:airing]} \n#{@shows[input.to_i-1][:description]}"
+        puts ""
+        prompt
       elsif input == "list"
         list_shows
       elsif input == "suggest"
